@@ -82,7 +82,7 @@ export function MapContainer<
   const contents = context ? (
     <LeafletProvider value={context}>{children}</LeafletProvider>
   ) : (
-    placeholder ?? null
+    placeholder || null
   )
   return (
     <div {...props} ref={mapRef}>
